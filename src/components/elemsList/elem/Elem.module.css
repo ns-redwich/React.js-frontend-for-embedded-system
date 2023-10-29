@@ -1,0 +1,22 @@
+.el {
+  cursor: pointer;
+  width: calc(33% - 20px);
+  height: 100px;
+  border: 2px solid #111d57;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.available {
+  background-color: rgb(64, 135, 30);
+}
+
+.notAvailable {
+  background-color: rgb(126, 27, 27);
+}

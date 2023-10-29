@@ -1,0 +1,151 @@
+.main {
+  position: relative;
+  width: 480px;
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.id {
+  padding-top: 30px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.accessCnt {
+  padding-top: 70px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.accessText {
+  margin-top: -4px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.checkboxWrapper6 .tgl {
+  display: none;
+}
+.checkboxWrapper6 .tgl,
+.checkboxWrapper6 .tgl:after,
+.checkboxWrapper6 .tgl:before,
+.checkboxWrapper6 .tgl *,
+.checkboxWrapper6 .tgl *:after,
+.checkboxWrapper6 .tgl *:before,
+.checkboxWrapper6 .tgl + .tglBtn {
+  box-sizing: border-box;
+}
+.checkboxWrapper6 .tgl::-moz-selection,
+.checkboxWrapper6 .tgl:after::-moz-selection,
+.checkboxWrapper6 .tgl:before::-moz-selection,
+.checkboxWrapper6 .tgl *::-moz-selection,
+.checkboxWrapper6 .tgl *:after::-moz-selection,
+.checkboxWrapper6 .tgl *:before::-moz-selection,
+.checkboxWrapper6 .tgl + .tglBtn::-moz-selection,
+.checkboxWrapper6 .tgl::selection,
+.checkboxWrapper6 .tgl:after::selection,
+.checkboxWrapper6 .tgl:before::selection,
+.checkboxWrapper6 .tgl *::selection,
+.checkboxWrapper6 .tgl *:after::selection,
+.checkboxWrapper6 .tgl *:before::selection,
+.checkboxWrapper6 .tgl + .tglBtn::selection {
+  background: none;
+}
+.checkboxWrapper6 .tgl + .tglBtn {
+  outline: 0;
+  display: block;
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkboxWrapper6 .tgl + .tglBtn:after,
+.checkboxWrapper6 .tgl + .tglBtn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.checkboxWrapper6 .tgl + .tglBtn:after {
+  left: 0;
+}
+.checkboxWrapper6 .tgl + .tglBtn:before {
+  display: none;
+}
+.checkboxWrapper6 .tgl:checked + .tglBtn:after {
+  left: 50%;
+}
+
+.checkboxWrapper6 .tglLight + .tglBtn {
+  background: #f0f0f0;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all 0.4s ease;
+}
+.checkboxWrapper6 .tglLight + .tglBtn:after {
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+.checkboxWrapper6 .tglLight:checked + .tglBtn {
+  background: #9fd6ae;
+}
+
+.keyCnt {
+  padding-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+.keyText {
+  margin-top: -4px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.keyInput {
+  box-sizing: border-box;
+  padding: 5px 10px;
+  width: 36%;
+  height: 38px;
+  background-color: #f0f0f0;
+  border: 2px solid #111d57;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 60px;
+  width: 70%;
+  height: 40px;
+  background-color: #f0f0f0;
+  border: 2px solid #111d57;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transition: all 0.2s;
+  background-color: #111d57;
+  color: #fff;
+}
