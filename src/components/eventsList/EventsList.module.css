@@ -28,7 +28,10 @@
 
 .colKey {
   font-weight: bold;
-  color: #6a6a74;
+}
+
+.colKeyGhost {
+  color: #6a6a74 !important;
 }
 
 .colIdAvailable {

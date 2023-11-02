@@ -1,36 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import s from "./EventsList.module.css";
 import cn from "classnames";
+import axios from "axios";
 
 const EventsList = () => {
+  const [log, setLog] = useState();
+
+  useEffect(() => {
+    axios.get("http://localhost:8000/log").then((response) => {
+      setLog(response.data);
+    });
+  }, []);
+
   return (
     <div className={s.list}>
       <div className={s.col}>
-        <p className={s.colText}>20 окт. 2023</p>
-        <p className={s.colText}>19 окт. 2023</p>
-        <p className={s.colText}>18 окт. 2023</p>
+        {log &&
+          log.map((item) => {
+            return (
+              <p key={item.id} className={s.colText}>
+                {item.date}
+              </p>
+            );
+          })}
       </div>
       <div className={s.col}>
-        <p className={s.colText}>21 : 15</p>
-        <p className={s.colText}>14 : 30</p>
-        <p className={s.colText}>15 : 00</p>
+        {log &&
+          log.map((item) => {
+            return (
+              <p key={item.id} className={s.colText}>
+                {item.time}
+              </p>
+            );
+          })}
       </div>
       <div className={s.col}>
-        <p
-          className={cn(s.colKey, {
-            [s.colIdAvailable]: true,
+        {log &&
+          log.map((item) => {
+            return (
+              <p
+                key={item.id}
+                className={cn(s.colKey, {
+                  [s.colIdAvailable]: item.access == 1,
+                  [s.colIdNotAvailable]: item.access == 0,
+                  [s.colKeyGhost]: item.identifier > 70 ? true : false,
+                })}
+              >
+                {item.identifier}
+              </p>
+            );
           })}
-        >
-          4
-        </p>
-        <p
-          className={cn(s.colKey, {
-            [s.colIdNotAvailable]: true,
-          })}
-        >
-          69
-        </p>
-        <p className={cn(s.colKey)}>20169823</p>
       </div>
     </div>
   );

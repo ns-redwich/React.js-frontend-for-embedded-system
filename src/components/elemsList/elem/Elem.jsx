@@ -4,15 +4,17 @@ import cn from "classnames";
 import { Link } from "react-router-dom";
 
 const Elem = (props) => {
+  const access = props.available ? 1 : 0;
+
   return (
     <Link
-      to={`/settings/${3}`}
+      to={`/settings/${props.id}/${access}/${props.elementKey}`}
       className={cn(s.el, {
         [s.available]: props.available,
         [s.notAvailable]: props.available == false,
       })}
     >
-      1
+      {props.id}
     </Link>
   );
 };
